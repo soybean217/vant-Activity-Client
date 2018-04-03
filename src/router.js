@@ -39,7 +39,39 @@ const routes = [{
     component: () =>
       import ('./pages/ActivityFoundList'),
     meta: {
-      title: '活动编辑'
+      title: '发起的活动'
+    }
+  }, {
+    path: '/activity_apply_list',
+    name: 'PageActivityApplyList',
+    component: () =>
+      import ('./pages/ActivityApplyList'),
+    meta: {
+      title: '参加的活动'
+    }
+  }, {
+    path: '/activity_edit',
+    name: 'PageActivityEdit',
+    component: () =>
+      import ('./pages/ActivityEdit'),
+    meta: {
+      title: '创建活动'
+    }
+  }, {
+    path: '/activity_view',
+    name: 'PageActivityView',
+    component: () =>
+      import ('./pages/ActivityView'),
+    meta: {
+      title: '查看活动'
+    }
+  }, {
+    path: '/applys_list',
+    name: 'PageApplysList',
+    component: () =>
+      import ('./pages/ApplysList'),
+    meta: {
+      title: '报名人员'
     }
   },
 ];
@@ -53,7 +85,6 @@ const router = new Router({ routes });
 
 router.beforeEach((to, from, next) => {
   const title = to.meta && to.meta.title;
-  console.log(to)
   if (title) {
     document.title = title;
   }

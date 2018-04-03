@@ -56,6 +56,7 @@ body,
 
     overflow-y: auto;
     overflow-x: hidden;
+    font-size: 16px;
   }
 }
 
