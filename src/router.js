@@ -73,6 +73,14 @@ const routes = [{
     meta: {
       title: '报名人员'
     }
+  }, {
+    path: '/applys_manage',
+    name: 'PageApplysManage',
+    component: () =>
+      import ('./pages/ApplysManage'),
+    meta: {
+      title: '管理报名'
+    }
   },
 ];
 
